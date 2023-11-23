@@ -1,127 +1,183 @@
 /*Jacob MacPhail-McAughey 8932866*/
-body
-{
-    font : normal normal normal 12px/1.5 verdana, arial, helvetica;
-    height : 100vh;
-    width : 100vw;
-    background-color: hsla(354, 76%, 53%, 0.7);
-}
-h1
-{
-    color:blueviolet;
-    font-size:30px;
+html {
+    font: normal normal normal 20px/1.5 verdana, arial, helvetica;
 }
 
-h2
-{
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: hsla(354, 76%, 53%, 0.7);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: blueviolet;
+    font-size: 2.5rem;
+}
+
+h2 {
     font-size: 2rem;
-    color : #fc9;
+    color: #fc9;
 }
-header
-{
+
+header {
     background-color: hsl(197, 100%, 50%);
+    flex: 1 10%;
 }
-nav ul li
-{
+
+nav {
+    flex: 1 5%;
+}
+
+nav ul li {
     display: inline;
     list-style-type: none;
 }
-nav ul li a
-{
-    color : indigo;
+
+nav ul li a {
+    color: indigo;
     border: 2px solid indigo;
     background-color: cornsilk;
     text-decoration: none;
-    padding : 4px;
+    padding: 1em;
 
 }
-nav ul li a:hover
-{
-    color : cornsilk;
+
+nav ul li a:hover {
+    color: cornsilk;
     border: 2px solid cornsilk;
     background-color: indigo;
 }
-main
-{
-    float : left;
-    width : 65vw;
+
+section {
+    display: flex;
+    flex-direction: row;
+    flex: 4 8%;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+main {
+
+    flex: 2 1 70%;
     background-color: hsl(113, 100%, 50%);
     /*height : 75vh;*/
 }
-aside
-{
-    float : right;
-    width : 25vw;
+
+aside {
+    flex: 1 2 30%;
     background-color: hsl(34, 100%, 50%);
     /*height : 75vh;*/
 }
-aside ul
-{
+
+aside ul {
     list-style-type: circle;
-}    
-aside li, a
-{
+}
+
+aside li,
+a {
     line-height: 1.5rem;
-    color:rgba(30, 200, 58, 0.911);
+    color: rgba(30, 200, 58, 0.911);
 }
-aside a
-{
-    color:rgba(30, 200, 58, 0.911);
+
+aside a {
+    color: rgba(30, 200, 58, 0.911);
 }
-aside a:hover
-{
-    color : rgb(255, 255, 255);
+
+aside a:hover {
+    color: rgb(255, 255, 255);
 }
-footer
-{
-    clear : both;
+
+footer {
+    flex: 1 5%;
     background-color: hsl(241, 100%, 50%);
 }
-.structural
-{
-    margin : 10px;
-    padding : 10px;
-    border : 3px solid;
+
+.structural {
+    margin: 1rem;
+    padding: 1rem;
+    border: 3px solid;
 }
-#para1
-{
-    color : rgb(255, 0, 187);
+
+#para1 {
+    color: rgb(255, 0, 187);
 }
-#para2
-{
-    color : rgb(255, 217, 0);
+
+#para2 {
+    color: rgb(255, 217, 0);
 }
-form
-{
+
+form {
     border: 5px dashed red;
 }
-input[type="text"], input[type="email"], input[type="submit"], select, option
-{
+
+input[type="text"],
+input[type="email"],
+input[type="submit"],
+select,
+option {
     display: block;
     width: 50%;
     height: 2em;
 }
-input[type="radio"], input[type="checkbox"]
-{
+
+input[type="radio"],
+input[type="checkbox"] {
     height: 2em;
     width: 2em;
 }
-select, option,label,legend
-{
+
+select,
+option,
+label,
+legend {
     font-variant: small-caps;
     font-weight: bold;
     font-size: 1.5rem;
 }
-textarea
-{
+
+textarea {
     display: block;
     width: 50%;
 }
-fieldset
-{
+
+fieldset {
     border: none;
 }
-footer p
-{
+
+#gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+figure {
+    border: 2px solid black;
+}
+
+img {
+    width: 80%;
+    height: 80%;
+}
+
+footer p {
     font-size: 0.75em;
+}
+
+@media (max-width: 1200px) {
+    html{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px){
+    html{
+        font-size: 10px;
+    }
+    #gallery{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
 }
